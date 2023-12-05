@@ -14,7 +14,7 @@ Node::~Node() {
   next = NULL;
 }
 
-Node::Node getNext() {
+Node* Node::getNext() {
   return next;
 }
 
@@ -26,6 +26,3 @@ Student* Node::getStudent() {
   return student;
 }
 
-void Node::setStudent(Student* newStudent) {
-  student = newStudent;
-}
