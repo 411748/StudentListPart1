@@ -1,3 +1,6 @@
+//Nick Braun
+//12/5/2023
+//Student List Part 1 - Shows that the functions in node code works
 #include <iostream>
 #include <cstring>
 #include "node.h"
@@ -5,10 +8,12 @@
 
 using namespace std;
 
+//Function prototypes
 void add(char* newstudent);
 void print(Node* next);
 void remove(Node*);
 
+//Main loop that calls to add multiple lists
 Node* head = NULL;
 int main() {
   char* Student1 = new char[SIZE];
@@ -19,9 +24,11 @@ int main() {
   strcpy(Student2, "Pear");
   add(Student2);
   print(head);
-  delete(n);
+  delete head;
+  head = NULL;
 }
 
+//Adding funtion that uses some of the functions in node code
 void add(char* newstudent) {
   Node* current = head;
   Student* s = new Student();
@@ -38,6 +45,7 @@ void add(char* newstudent) {
   }
 }
 
+//Print function that uses the rest of the functions in node code
 void print(Node* next) {
   if(next == head) {
     cout << "List: ";
